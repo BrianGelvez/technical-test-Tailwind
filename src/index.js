@@ -6,35 +6,32 @@ document.addEventListener("DOMContentLoaded", function() {
         collection1Swiper = new Swiper('.collection1-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
-            spaceBetween: 30,  // Espacio entre las diapositivas
+            slidesPerView: 3,  
+            spaceBetween: 30,  
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
             breakpoints: {
                 1024: {
-                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    slidesPerView: 5, 
                     spaceBetween: 50
                 }
             }
         });
 
-        // Repite el mismo patrón para los otros swipers (collection2, collection3, collection4)
-        // ...
-
         collection2Swiper = new Swiper('.collection2-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
-            spaceBetween: 30,  // Espacio entre las diapositivas
+            slidesPerView: 3, 
+            spaceBetween: 30, 
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
             breakpoints: {
                 1024: {
-                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    slidesPerView: 5,  
                     spaceBetween: 50
                 }
             }
@@ -43,15 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
         collection3Swiper = new Swiper('.collection3-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
-            spaceBetween: 30,  // Espacio entre las diapositivas
+            slidesPerView: 3,  
+            spaceBetween: 30,  
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
             breakpoints: {
                 1024: {
-                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    slidesPerView: 5,  
                     spaceBetween: 50
                 }
             }
@@ -60,15 +57,15 @@ document.addEventListener("DOMContentLoaded", function() {
         collection4Swiper = new Swiper('.collection4-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
-            spaceBetween: 30,  // Espacio entre las diapositivas
+            slidesPerView: 3, 
+            spaceBetween: 30, 
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
             breakpoints: {
                 1024: {
-                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    slidesPerView: 5, 
                     spaceBetween: 50
                 }
             }
@@ -80,8 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
             collection1Swiper.destroy();
         }
 
-        // Repite el mismo patrón para los otros swipers (collection2, collection3, collection4)
-        // ...
+    
     }
 
     function handleResize() {
@@ -148,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            // Restaurar el estilo de los botones
+
             tabs.forEach(tab => {
                 tab.classList.remove('active', 'tab-indicator', 'bg-colorGreen', 'text-white', 'rounded-xl');
             });
@@ -157,13 +153,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 content.classList.add('hidden');
             });
 
-            // Obtener la colección del botón clicado
+          
             const collection = tab.getAttribute('data-collection');
             const activeContent = document.querySelector(`.tab-content.${collection}`);
             activeContent.classList.remove('hidden');
             activeContent.classList.add('active');
 
-            // Agregar las clases de estilo al botón clicado
             tab.classList.add('active', 'tab-indicator', 'bg-colorGreen', 'text-white', 'rounded-xl', 'px-5');
         });
     });
