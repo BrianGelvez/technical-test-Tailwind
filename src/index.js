@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         collection1Swiper = new Swiper('.collection1-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3,  
+            slidesPerView: 2,  
             spaceBetween: 30,  
             pagination: {
                 el: '.swiper-pagination',
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         collection2Swiper = new Swiper('.collection2-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3, 
+            slidesPerView: 2, 
             spaceBetween: 30, 
             pagination: {
                 el: '.swiper-pagination',
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         collection3Swiper = new Swiper('.collection3-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3,  
+            slidesPerView: 2,  
             spaceBetween: 30,  
             pagination: {
                 el: '.swiper-pagination',
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
         collection4Swiper = new Swiper('.collection4-swiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 3, 
+            slidesPerView: 2, 
             spaceBetween: 30, 
             pagination: {
                 el: '.swiper-pagination',
