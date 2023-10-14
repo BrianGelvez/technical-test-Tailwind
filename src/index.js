@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const menu = document.getElementById("menu");
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
-    let active = false;
+
 
     if (window.innerWidth <= 1024) {
         menu.classList.add("hidden");
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
             activeContent.classList.remove('hidden');
             activeContent.classList.add('active');
 
-            tab.classList.add('active', 'tab-indicator', 'bg-colorGreen', 'text-white', 'rounded-xl', 'px-5');
+            tab.classList.add('active', 'tab-indicator', 'bg-colorGreen', 'text-white', 'rounded-xl', 'px-1');
         });
     });
 

@@ -41,25 +41,32 @@
     </div>
     <div class="swiper">
         <!-- Additional required wrapper -->
+
+        <!-- md:p-4 md:flex md:flex-col-reverse md:items-center md:content-center sm:p-4 sm:flex sm:flex-col-reverse sm:items-center sm:content-center xs:p-4 xs:flex xs:flex-col-reverse xs:items-center xs:content-center -->
+
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
                 <div
-                    class="divConteiner bg-fondo lg:py-5 lg:px-12 lg:pb-20 lg:flex lg:justify-center lg:items-center lg: lg:gap-60">
-                    <div class="divConteinerText lg:mt-44">
-                        <p class="title text-colorGreen text-6xl font-bold"><b>Lorem ipsum <br> dolor sit amet</b></p>
-                        <p class="subTitle text-colorGreen lg:mt-5">Nunc porttitor tortor metus, nec sagittis lectus
+                    class="divConteiner md:p-10 md:flex md:flex-col-reverse md:justify-center md:items-center sm:p-10 sm:flex sm:flex-col-reverse sm:justify-center sm:items-center xs:p-10 xs:flex xs:flex-col-reverse xs:justify-center xs:items-center bg-fondo lg:py-5 lg:px-12 lg:pb-20 lg:flex lg:justify-center lg:flex-row lg:items-center lg:gap-60">
+                    <div class="divConteinerText lg:mt-44 md:mt-16 sm:mt-16 xs:mt-16">
+                        <p class="title text-colorGreen text-6xl font-bold lg:block"><b>Lorem ipsum <br> dolor sit amet</b></p>
+                        <p class="subTitle text-colorGreen lg:mt-5 lg:block md:hidden sm:hidden xs:hidden">Nunc porttitor tortor metus, nec sagittis lectus
                             accumsan quis.</p>
-                        <p class="subTitle text-colorGreen lg:mt-1">Aenean eusmod mollis tempor.</p>
-                        <div class="conteinerButtons lg:flex lg:space-x-4 pt-10">
+                        <p class="subTitle text-colorGreen lg:mt-1 lg:block md:hidden sm:hidden xs:hidden">Aenean eusmod mollis tempor.</p>
+
+
+                        <div class="conteinerButtons lg:flex lg:flex-row lg:w-full md:w-56 md:flex md:flex-col lg:space-x-4 pt-10">
                             <button class="boton1 bg-colorGreen text-colorWhite rounded-xl p-4 relative font-bold">
                                 SHOP NOW<span class="after pl-7 ml-9">&gt;</span>
                             </button>
                             <button
-                                class="boton2 text-colorGreen relative font-bold border border-colorGreen rounded-xl p-4">
-                                TAKE THE QUIZ<span class="after ml-7">&gt;</span>
+                                class="boton2  md:font-bold sm:font-bold xs:font-bold lg:text-colorGreen lg:relative lg:font-bold lg:border lg:border-colorGreen lg:rounded-xl p-4">
+                                TAKE THE QUIZ<span class="hidden lg:inline lg:ml-7">&gt;</span>
                             </button>
                         </div>
+
+                        
                         <div class="buttonsArrows pt-64">
                             <button
                                 class="butonArrow1 border border-colorGreen rounded-xl px-3 text-colorGreen">🡰</button>
@@ -73,7 +80,7 @@
             </div>
             <div class="swiper-slide">
                 <div
-                    class="divConteiner bg-fondo lg:py-5 lg:px-12 lg:pb-20 lg:flex lg:justify-center lg:items-center lg: lg:gap-60">
+                    class="divConteiner md:p-10 md:flex md:flex-col-reverse md:justify-center md:items-center sm:p-10 sm:flex sm:flex-col-reverse sm:justify-center sm:items-center xs:p-10 xs:flex xs:flex-col-reverse xs:justify-center xs:items-center bg-fondo lg:py-5 lg:px-12 lg:pb-20 lg:flex lg:justify-center lg:flex-row lg:items-center lg:gap-60">
                     <div class="divConteinerText lg:mt-44">
                         <p class="title text-colorGreen text-6xl font-bold"><b>Lorem ipsum <br> dolor sit amet</b></p>
                         <p class="subTitle text-colorGreen lg:mt-5">Nunc porttitor tortor metus, nec sagittis lectus
@@ -114,23 +121,28 @@
             <span class="secondPart text-colorGreen">choosing a color</span>
         </p>
         <div class="tabs w-3/5 m-auto rounded-xl overflow-hidden mt-10">
-            <div class="tab-header lg:flex p-2 border-2 rounded-xl md:grid lg:gap-4 grid-cols-2 md:justify-around">
-                <div class="tab lg:mx-3 flex-1 md:w-45 text-center py-2 cursor-pointer font-bold text-colorGreen whitespace-nowrap"
+            <div class="tab-header lg:flex p-2 border-2 rounded-xl md:grid lg:gap-4 md:grid-cols-2 md:justify-around sm:grid-cols-2 sm:justify-around">
+
+                <div class="tab lg:flex-1 text-center py-2 cursor-pointer font-bold text-colorGreen "
                     data-collection="collection1">
                     COLLECTION 1
                 </div>
-                <div class="tab lg:mx-3 flex-1 md:w-45 text-center py-2 cursor-pointer font-bold text-colorGreen whitespace-nowrap"
+
+                <div class="tab lg:flex-1 text-center py-2 cursor-pointer font-bold text-colorGreen "
                     data-collection="collection2">
                     COLLECTION 2
                 </div>
-                <div class="tab lg:mx-3 flex-1 md:w-45 text-center py-2 cursor-pointer font-bold text-colorGreen whitespace-nowrap"
+
+                <div class="tab lg:flex-1 text-center py-2 cursor-pointer font-bold text-colorGreen "
                     data-collection="collection3">
                     COLLECTION 3
                 </div>
-                <div class="tab lg:mx-3 flex-1 md:w-45 text-center py-2 cursor-pointer font-bold text-colorGreen whitespace-nowrap"
+
+                <div class="tab lg:flex-1 text-center py-2 cursor-pointer font-bold text-colorGreen "
                     data-collection="collection4">
                     COLLECTION 4
                 </div>
+                
             </div>
 
             <div class="tab-indicator bg-colorGreen transition-all duration-300 ease"></div>
