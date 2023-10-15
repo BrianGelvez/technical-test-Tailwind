@@ -19,15 +19,35 @@
         </div>
         <header
             class="shadow-md w-full h-24 lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center sm:flex sm:justify-between sm:items-center xs:flex xs:justify-between xs:items-center">
-            <button id="menuButton" class="lg:mx-20 md:mx-10 sm:mx-10 xs:mx-10 lg:text-white ">
-                <svg class="" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                </svg>
-            </button>
-            <nav id="menu" class="lg:flex lg:justify-center lg:items-center lg:space-x-16 font-bold">
-                <ul class="lg:flex lg:items-center space-x-16">
+
+
+            <div class="min-h-screen  py-6 flex flex-col justify-center sm:py-12 ">
+                <div class="relative py-3 sm:max-w-xl mx-auto lg:bg-white md:ml-8 sm:ml-8 xs:ml-8">
+                    <nav x-data="{ open: false }">
+                        <button id="menuButton" class=" w-10 h-10 relative focus:outline-none lg:bg-white "
+                            @click="open = !open">
+                            <span class="sr-only lg:bg-white">Open main menu</span>
+                            <div
+                                class="block w-5 absolute left-1/2 top-1/2 lg:bg-white  transform  -translate-x-1/2 -translate-y-1/2">
+                                <span aria-hidden="true"
+                                    class="block absolute lg:bg-white h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                                    :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                                <span aria-hidden="true"
+                                    class="block absolute lg:bg-white h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                                    :class="{'opacity-0': open } "></span>
+                                <span aria-hidden="true"
+                                    class="block absolute lg:bg-white h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                                    :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                            </div>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+
+
+            <nav id="menu" class="lg:flex lg:justify-center lg:items-center lg:space-x-16 font-bold lg:bg-colorWhite">
+                <ul class="lg:flex lg:justify-center lg:items-center lg:space-x-16 lg:bg-colorWhite md:bg-slate-100 md:grid md:grid-cols-3 md:gap-4 md:rounded-lg md:p-2 ">
                     <li><a href="#" class="text-colorGreen">HOME</a></li>
                     <li><a href="#" class="text-colorGreen">ITEM 1</a></li>
                     <li><a href="#" class="text-colorGreen">ITEM 2</a></li>
@@ -49,18 +69,26 @@
             <div class="swiper-slide">
                 <div
                     class="divConteiner md:p-10 md:flex md:flex-col-reverse md:justify-center md:items-center sm:p-10 sm:flex sm:flex-col-reverse sm:justify-center sm:items-center xs:p-10 xs:flex xs:flex-col-reverse xs:justify-center xs:items-center bg-fondo lg:py-5 lg:px-12 lg:pb-20 lg:flex lg:justify-evenly lg:flex-row lg:items-center gap-20">
-                    <div class="divConteinerText lg: lg:mt-44 lg:flex-col lg:content-start lg:items-start lg: sm:mt-0 xs:mt-0 md:flex md:flex-col md:justify-center md:items-center sm:flex sm:flex-col sm:justify-center sm:items-center xs:flex xs:flex-col xs:justify-center xs:items-center">
-                        <p class="title text-colorGreen text-55 font-bold leading-extra-tight lg:whitespace-nowrap lg:block">
+                    <div
+                        class="divConteinerText lg: lg:mt-44 lg:flex-col lg:content-start lg:items-start lg: sm:mt-0 xs:mt-0 md:flex md:flex-col md:justify-center md:items-center sm:flex sm:flex-col sm:justify-center sm:items-center xs:flex xs:flex-col xs:justify-center xs:items-center">
+                        <p
+                            class="title text-colorGreen text-55 font-bold leading-extra-tight lg:whitespace-nowrap lg:block">
                             <b>Lorem ipsum <br> dolor sit amet</b>
                         </p>
-                        
-                        <p class="subTitle text-colorGreen lg:mt-5 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">Nunc porttitor tortor metus, nec sagittis lectus
+
+                        <p
+                            class="subTitle text-colorGreen lg:mt-5 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">
+                            Nunc porttitor tortor metus, nec sagittis lectus
                             accumsan quis.</p>
-                        <p class="subTitle text-colorGreen lg:mt-1 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">Aenean eusmod mollis tempor.</p>
+                        <p
+                            class="subTitle text-colorGreen lg:mt-1 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">
+                            Aenean eusmod mollis tempor.</p>
 
 
-                        <div class="conteinerButtons lg:mx-0 lg:my-0 lg:flex lg:flex-row lg:w-full lg:space-x-4 lg:pt-10   md:pt-3 md:w-56 md:flex md:flex-col  sm:pt-8 sm:w-56 sm:flex sm:flex-col  xs:pt-8 xs:w-56 xs:flex xs:flex-col ">
-                            <button class="boton1 lg:mx-0 lg:my-0 bg-colorGreen text-colorWhite rounded-xl p-4 relative font-bold md:my-5 sm:my-5 xs:my-5">
+                        <div
+                            class="conteinerButtons lg:mx-0 lg:my-0 lg:flex lg:flex-row lg:w-full lg:space-x-4 lg:pt-10   md:pt-3 md:w-56 md:flex md:flex-col  sm:pt-8 sm:w-56 sm:flex sm:flex-col  xs:pt-8 xs:w-56 xs:flex xs:flex-col ">
+                            <button
+                                class="boton1 lg:mx-0 lg:my-0 bg-colorGreen text-colorWhite rounded-xl p-4 relative font-bold md:my-5 sm:my-5 xs:my-5">
                                 SHOP NOW<span class="after pl-7 ml-9">&gt;</span>
                             </button>
                             <button
@@ -69,8 +97,9 @@
                             </button>
                         </div>
 
-                        
-                        <div class="buttonsArrows lg:flex lg:justify-start lg:items-start gap-1 lg:pt-64 md:mt-6 md:flex md:justify-center md:items-center sm:mt-6 sm:flex sm:justify-center sm:items-center xs:mt-6 xs:flex xs:justify-center xs:items-center">
+
+                        <div
+                            class="buttonsArrows lg:flex lg:justify-start lg:items-start gap-1 lg:pt-64 md:mt-6 md:flex md:justify-center md:items-center sm:mt-6 sm:flex sm:justify-center sm:items-center xs:mt-6 xs:flex xs:justify-center xs:items-center">
                             <button
                                 class="butonArrow1 border border-colorGreen rounded-xl px-3 text-colorGreen">🡰</button>
                             <button class="butonArrow2 bg-colorGreen border text-colorWhite rounded-xl px-3">🡲</button>
@@ -84,18 +113,26 @@
             <div class="swiper-slide">
                 <div
                     class="divConteiner md:p-10 md:flex md:flex-col-reverse md:justify-center md:items-center sm:p-10 sm:flex sm:flex-col-reverse sm:justify-center sm:items-center xs:p-10 xs:flex xs:flex-col-reverse xs:justify-center xs:items-center bg-fondo lg:py-5 lg:px-12 lg:pb-20 lg:flex lg:justify-evenly lg:flex-row lg:items-center gap-20">
-                    <div class="divConteinerText lg: lg:mt-44 lg:flex-col lg:content-start lg:items-start lg: sm:mt-0 xs:mt-0 md:flex md:flex-col md:justify-center md:items-center sm:flex sm:flex-col sm:justify-center sm:items-center xs:flex xs:flex-col xs:justify-center xs:items-center">
-                        <p class="title text-colorGreen text-55 font-bold leading-extra-tight lg:whitespace-nowrap lg:block">
+                    <div
+                        class="divConteinerText lg: lg:mt-44 lg:flex-col lg:content-start lg:items-start lg: sm:mt-0 xs:mt-0 md:flex md:flex-col md:justify-center md:items-center sm:flex sm:flex-col sm:justify-center sm:items-center xs:flex xs:flex-col xs:justify-center xs:items-center">
+                        <p
+                            class="title text-colorGreen text-55 font-bold leading-extra-tight lg:whitespace-nowrap lg:block">
                             <b>Lorem ipsum <br> dolor sit amet</b>
                         </p>
-                        
-                        <p class="subTitle text-colorGreen lg:mt-5 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">Nunc porttitor tortor metus, nec sagittis lectus
+
+                        <p
+                            class="subTitle text-colorGreen lg:mt-5 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">
+                            Nunc porttitor tortor metus, nec sagittis lectus
                             accumsan quis.</p>
-                        <p class="subTitle text-colorGreen lg:mt-1 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">Aenean eusmod mollis tempor.</p>
+                        <p
+                            class="subTitle text-colorGreen lg:mt-1 lg:block md:hidden sm:hidden xs:hidden whitespace-nowrap">
+                            Aenean eusmod mollis tempor.</p>
 
 
-                        <div class="conteinerButtons lg:mx-0 lg:my-0 lg:flex lg:flex-row lg:w-full lg:space-x-4 lg:pt-10   md:pt-3 md:w-56 md:flex md:flex-col  sm:pt-8 sm:w-56 sm:flex sm:flex-col  xs:pt-8 xs:w-56 xs:flex xs:flex-col ">
-                            <button class="boton1 lg:mx-0 lg:my-0 bg-colorGreen text-colorWhite rounded-xl p-4 relative font-bold md:my-5 sm:my-5 xs:my-5">
+                        <div
+                            class="conteinerButtons lg:mx-0 lg:my-0 lg:flex lg:flex-row lg:w-full lg:space-x-4 lg:pt-10   md:pt-3 md:w-56 md:flex md:flex-col  sm:pt-8 sm:w-56 sm:flex sm:flex-col  xs:pt-8 xs:w-56 xs:flex xs:flex-col ">
+                            <button
+                                class="boton1 lg:mx-0 lg:my-0 bg-colorGreen text-colorWhite rounded-xl p-4 relative font-bold md:my-5 sm:my-5 xs:my-5">
                                 SHOP NOW<span class="after pl-7 ml-9">&gt;</span>
                             </button>
                             <button
@@ -104,8 +141,9 @@
                             </button>
                         </div>
 
-                        
-                        <div class="buttonsArrows lg:flex lg:justify-start lg:items-start gap-1 lg:pt-64 md:mt-6 md:flex md:justify-center md:items-center sm:mt-6 sm:flex sm:justify-center sm:items-center xs:mt-6 xs:flex xs:justify-center xs:items-center">
+
+                        <div
+                            class="buttonsArrows lg:flex lg:justify-start lg:items-start gap-1 lg:pt-64 md:mt-6 md:flex md:justify-center md:items-center sm:mt-6 sm:flex sm:justify-center sm:items-center xs:mt-6 xs:flex xs:justify-center xs:items-center">
                             <button
                                 class="butonArrow1 border border-colorGreen rounded-xl px-3 text-colorGreen">🡰</button>
                             <button class="butonArrow2 bg-colorGreen border text-colorWhite rounded-xl px-3">🡲</button>
@@ -126,7 +164,8 @@
     </div>
     </div>
     <div class="div2 mt-20">
-        <p class="titleDiv2 text-5xl font-bold text-colorGreen lg:flex lg:flex-row lg:items-center lg:justify-center md:flex md:flex-col md:items-center sm:flex sm:flex-col sm:items-center xs:flex xs:flex-col xs:items-center">
+        <p
+            class="titleDiv2 text-5xl font-bold text-colorGreen lg:flex lg:flex-row lg:items-center lg:justify-center md:flex md:flex-col md:items-center sm:flex sm:flex-col sm:items-center xs:flex xs:flex-col xs:items-center">
             <span class="firstPart text-colorGreen opacity-70 mr-2">I Need Help</span>
             <span class="secondPart text-colorGreen">choosing a color</span>
         </p>
@@ -135,7 +174,8 @@
 
 
 
-            <div class="tab-header lg:flex lg:p-2 lg:border-2 lg:rounded-xl md:grid md:grid-cols-2 md:justify-around sm:grid sm:grid-cols-2 sm:justify-around xs:grid xs:grid-cols-2 xs:justify-around">
+            <div
+                class="tab-header lg:flex lg:p-2 lg:border-2 lg:rounded-xl md:grid md:grid-cols-2 md:justify-around sm:grid sm:grid-cols-2 sm:justify-around xs:grid xs:grid-cols-2 xs:justify-around">
 
                 <div class="tab lg:flex-1 text-center py-2 cursor-pointer font-bold text-colorGreen "
                     data-collection="collection1">
@@ -156,11 +196,11 @@
                     data-collection="collection4">
                     COLLECTION 4
                 </div>
-                
+
             </div>
 
 
-            
+
 
             <div class="tab-indicator bg-colorGreen transition-all duration-300 ease"></div>
 
@@ -176,26 +216,33 @@
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen1.png" alt="">
                                 <div class="mostPopular flex justify-center items-center">
-                                    <button class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST POPULAR</button>
+                                    <button
+                                        class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST
+                                        POPULAR</button>
                                 </div>
-                                <p class="product text-colorGreen font-bold flex justify-center items-center">Product 1</p>
+                                <p class="product text-colorGreen font-bold flex justify-center items-center">Product 1
+                                </p>
 
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen2.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">Product 2</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">
+                                    Product 2</p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen3.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">Product 3</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">
+                                    Product 3</p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen4.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">Product 4</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">
+                                    Product 4</p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen5.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">Product 5</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center mt-10">
+                                    Product 5</p>
                             </div>
                         </div>
 
@@ -207,25 +254,32 @@
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen5.png" alt="">
                                 <div class="mostPopular flex justify-center items-center">
-                                    <button class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST POPULAR</button>
+                                    <button
+                                        class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST
+                                        POPULAR</button>
                                 </div>
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 1</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 1
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen4.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 2</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 2
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen3.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 3</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 3
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen2.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 4</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 4
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen1.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 5</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 5
+                                </p>
                             </div>
                         </div>
 
@@ -237,25 +291,32 @@
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen3.png" alt="">
                                 <div class="mostPopular flex justify-center items-center">
-                                    <button class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST POPULAR</button>
+                                    <button
+                                        class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST
+                                        POPULAR</button>
                                 </div>
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 1</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 1
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen5.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 2</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 2
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen1.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 3</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 3
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen4.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 4</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 4
+                                </p>
                             </div>
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen2.png" alt="">
-                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 5</p>
+                                <p class="product  text-colorGreen font-bold flex justify-center items-center">Product 5
+                                </p>
                             </div>
                         </div>
 
@@ -267,7 +328,9 @@
                             <div class="swiper-slide">
                                 <img class="imagenes swiper-img" src="./images/imagen5.png" alt="">
                                 <div class="mostPopular flex justify-center items-center">
-                                    <button class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST POPULAR</button>
+                                    <button
+                                        class="text-xs p-1 border text-colorWhite bg-colorGreen rounded-md mt-4">MOST
+                                        POPULAR</button>
                                 </div>
                                 <p class=" text-colorGreen font-bold flex justify-center items-center">Product 1</p>
                             </div>
@@ -295,5 +358,6 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 </html>
