@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
+        
 
         collection2Swiper = new Swiper('.collection2-swiper', {
             direction: 'horizontal',
